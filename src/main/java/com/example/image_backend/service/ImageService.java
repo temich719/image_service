@@ -1,14 +1,10 @@
 package com.example.image_backend.service;
 
 import com.example.image_backend.dto.SaveImageMessage;
-import org.springframework.core.io.Resource;
+import com.example.image_backend.exception.SaveImageException;
 
 public interface ImageService {
 
-    void saveImageToStorage(SaveImageMessage imageMessage);
-
-    Resource getUserAvatarByPath(String path);
-
-    //get cars
+    void saveImageToStorage(SaveImageMessage imageMessage) throws SaveImageException;
 
 }
